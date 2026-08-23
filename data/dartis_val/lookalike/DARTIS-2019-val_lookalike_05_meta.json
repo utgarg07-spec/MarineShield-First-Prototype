@@ -1,0 +1,20 @@
+{
+  "sample_id": "DARTIS-2019-val_lookalike_05",
+  "class_label": "CLEAN_WATER",
+  "split": "DARTIS-2019-val",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "box_prompt": [
+    100,
+    100,
+    400,
+    400
+  ],
+  "center_point": [
+    250,
+    250
+  ]
+}

@@ -1,0 +1,167 @@
+# ============================================================
+# MarineShield prototype .gitignore
+# ============================================================
+
+# -------------------------
+# Environment files/secrets
+# -------------------------
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+# Firebase and cloud credentials
+.firebase/
+.firebase-debug.log
+firebase-debug.log
+firebase-debug.*
+firestore-debug.log
+firestore-debug.*
+service-account*.json
+serviceAccountKey*.json
+*service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# Never commit local Firebase configuration
+frontend/.env.local
+frontend/.env.*.local
+
+# -------------------------
+# Python environments/cache
+# -------------------------
+.venv/
+venv/
+env/
+ENV/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# -------------------------
+# Node/Vite/frontend outputs
+# -------------------------
+node_modules/
+**/node_modules/
+frontend/dist/
+**/dist/
+.next/
+build/
+out/
+.turbo/
+.vite/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -------------------------
+# Large ML model files
+# Keep model source code and specifications; ignore weights.
+# -------------------------
+**/*.pt
+**/*.pth
+**/*.bin
+**/*.onnx
+**/*.safetensors
+**/*.ckpt
+**/*.weights
+checkpoints/
+model_checkpoints/
+mlruns/
+wandb/
+
+# -------------------------
+# Large/raw datasets and imagery
+# Do NOT ignore data/ completely: approved fixtures must remain trackable.
+# -------------------------
+data/raw/
+data/processed/
+data/downloaded/
+data/cache/
+data/tmp/
+datasets/raw/
+datasets/processed/
+datasets/downloaded/
+datasets/cache/
+
+**/*.SAFE/
+**/*.tif
+**/*.tiff
+**/*.jp2
+**/*.nc
+**/*.grib
+**/*.grib2
+**/*.hdf
+**/*.h5
+**/*.hdf5
+**/*.gpkg
+**/*.vrt
+**/*.zip
+**/*.tar
+**/*.tar.gz
+
+# Keep approved small fixtures and handoff JSON files under data/fixtures/.
+!data/
+!data/fixtures/
+!data/fixtures/**
+
+# -------------------------
+# Databases and runtime data
+# -------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+# -------------------------
+# Logs and temporary files
+# -------------------------
+*.log
+logs/
+log/
+scratch/
+temp/
+tmp/
+.cache/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# -------------------------
+# IDE and operating-system files
+# -------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# -------------------------
+# Optional local test/browser output
+# -------------------------
+playwright-report/
+test-results/
+coverage/
+
+# -------------------------
+# Local backups
+# -------------------------
+backup/
+backups/
+*.orig

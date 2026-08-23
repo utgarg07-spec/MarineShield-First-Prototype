@@ -1,0 +1,104 @@
+{
+  "scenario_id": "SCENARIO-03-NO-PLAUSIBLE-CANDIDATE",
+  "description": "All monitored AIS vessels in the EEZ are distant or out-of-window. No candidate achieves sufficient evidence score, correctly triggering an UNKNOWN source outcome.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c003",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-003",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c003",
+    "spill_geometry_id": "spill-geom-003",
+    "hypothesis_state": "UNRESOLVED",
+    "discharge_modality": "UNCERTAIN_ORIGIN",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T18:00:00Z",
+      "t_earliest_utc": "2026-08-20T12:00:00Z",
+      "t_most_likely_utc": "2026-08-20T14:30:00Z",
+      "t_latest_utc": "2026-08-20T17:00:00Z",
+      "window_duration_hours": 5.0
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [68.50, 20.10],
+              [68.70, 20.10],
+              [68.70, 20.30],
+              [68.50, 20.30],
+              [68.50, 20.10]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 42.0,
+          "centroid_lon": 68.60,
+          "centroid_lat": 20.20
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-03-vessel-distant",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "419001234",
+        "vessel_name": "GULF GLORY",
+        "vessel_type": "GENERAL_CARGO"
+      },
+      "component_scores": {
+        "spatial": 15.0,
+        "temporal": 30.0,
+        "trajectory": 10.0,
+        "drift": 5.0,
+        "vessel": 30.0,
+        "behavior": 20.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 17.50,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 1,
+      "supporting_evidence": [],
+      "contradictory_evidence": [
+        "Vessel was 62.4 km away from release polygon at closest point of approach"
+      ]
+    },
+    {
+      "source_hypothesis_id": "src-hyp-03-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "Source cannot be reliably determined from available observation feeds"
+      },
+      "evidence_score": 0.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 2
+    }
+  ],
+  "unknown_state": {
+    "status": "SOURCE_UNKNOWN",
+    "trigger_condition": "ALL_CANDIDATES_BELOW_THRESHOLD",
+    "diagnostic_summary": {
+      "total_candidates_evaluated": 1,
+      "highest_candidate_score": 17.50,
+      "ais_coverage_percentage": 94.0,
+      "sar_dark_vessels_detected_count": 0
+    },
+    "recommended_investigation_actions": [
+      "EXPAND_AIS_TEMPORAL_SEARCH_WINDOW",
+      "SEARCH_HISTORICAL_SAR_SCENES_FOR_EARLIER_PASSES"
+    ]
+  },
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-03-unknown",
+    "top_hypothesis_category": "UNKNOWN_SOURCE",
+    "top_evidence_score": 17.50,
+    "top_evidence_strength": "INSUFFICIENT_EVIDENCE",
+    "ranking_stability": "FRAGILE_RANKING",
+    "is_unknown_triggered": true,
+    "active_contradictions_count": 0
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "attribution_status": "SOURCE_UNKNOWN",
+  "data_provenance": {
+    "environmental_data_mode": "NOT_AVAILABLE",
+    "vessel_data_mode": "MOCK_HYBRID",
+    "vessel_provenance_hash": "demo_run_dff3e36e4f111353"
+  },
+  "environmental_evidence_status": {
+    "drift_reconstruction": {
+      "drift_compatibility_score": null,
+      "release_region_status": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY",
+      "release_time_window_status": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY"
+    },
+    "explanation": "Environmental history (ERA5 wind and HYCOM current vectors) has not been provided by Person 3 (Member 5). Release reconstruction and drift compatibility calculations are explicitly suppressed.",
+    "incident_id": "phase6-val-inc-20260821-001",
+    "investigation_timestamp_utc": "2024-01-20T00:55:41.203509Z",
+    "provenance_status": "NOT_AVAILABLE",
+    "reason_code": "PERSON3_ENVIRONMENTAL_HANDOFF_NOT_PROVIDED",
+    "status": "BLOCKED"
+  },
+  "evaluated_candidates": [
+    {
+      "candidate_entity": {
+        "vessel_mmsi": "413123456",
+        "vessel_name": "Cooperative Vessel MMSI-413123456",
+        "vessel_type": "CARGO"
+      },
+      "candidate_id": "cand-vsl-mmsi-413123456",
+      "component_scores": {
+        "behavior": 45.0,
+        "contradiction": 0.0,
+        "drift": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY",
+        "spatial": 90.0,
+        "temporal": 85.0,
+        "trajectory": 80.0,
+        "vessel": 75.0
+      },
+      "contradictory_evidence": [],
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "supporting_evidence": [
+        {
+          "evidence_type": "SPATIAL_PROXIMITY",
+          "polarity": "SUPPORTING",
+          "summary": "Vessel transit points recorded near target region"
+        },
+        {
+          "evidence_type": "TEMPORAL_INTERSECTION",
+          "polarity": "SUPPORTING",
+          "summary": "AIS broadcast timestamp aligns with SAR acquisition time"
+        },
+        {
+          "evidence_type": "BEHAVIOR_ANOMALY",
+          "polarity": "SUPPORTING",
+          "summary": "AIS transmission gap detected during transit"
+        }
+      ]
+    },
+    {
+      "candidate_entity": {
+        "description": "SAR-Detected Dark Target (Unmatched)",
+        "estimated_length_m": 95.0,
+        "sar_detection_id": "SAR_DET_20240120_002"
+      },
+      "candidate_id": "cand-dark-vessel-SAR_DET_20240120_002",
+      "component_scores": {
+        "behavior": 65.0,
+        "contradiction": 0.0,
+        "drift": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY",
+        "spatial": 95.0,
+        "temporal": 90.0,
+        "trajectory": 85.0,
+        "vessel": 80.0
+      },
+      "contradictory_evidence": [],
+      "hypothesis_label": "H_2",
+      "source_category": "VESSEL_UNTRACKED_DARK",
+      "supporting_evidence": [
+        {
+          "evidence_type": "SPATIAL_PROXIMITY",
+          "polarity": "SUPPORTING",
+          "summary": "SAR radar detection located within maritime observation zone"
+        },
+        {
+          "evidence_type": "BEHAVIOR_ANOMALY",
+          "polarity": "SUPPORTING",
+          "summary": "Uncooperative radar target lacking correlated AIS transmission"
+        }
+      ]
+    }
+  ],
+  "incident_id": "phase6-val-inc-20260821-001",
+  "investigation_timestamp_utc": "2024-01-20T00:55:41.203509Z",
+  "mode": "MODE_A_PARTIAL_INTEGRATION_NO_ENVIRONMENT",
+  "non_guilt_clause": "This partial evaluation reflects maritime observations only. Absence of environmental drift history suppresses definitive source ranking. Unmatched dark targets carry analytical investigation flags only and do not constitute proof of responsibility.",
+  "release_reconstruction": {
+    "reconstruction_polygon_geojson": null,
+    "release_region_status": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY",
+    "release_time_window_status": "UNAVAILABLE_PENDING_ENVIRONMENTAL_HISTORY"
+  },
+  "source_ranking_status": "NOT_COMPUTED",
+  "unknown_trigger_reason": "PERSON3_ENVIRONMENTAL_HANDOFF_NOT_PROVIDED",
+  "vessel_input_summary": {
+    "accepted_observations_count": 3,
+    "excluded_future_observations_count": 2,
+    "excluded_observation_ids": [
+      "240cdb8f-9884-4852-9d71-4ee53d5efe63",
+      "f5e5f969-7bd8-476d-b820-14ec20b4736b"
+    ],
+    "sar_vessel_detections_count": 2,
+    "total_ais_candidates_ingested": 5,
+    "unmatched_dark_vessels_count": 1,
+    "vessel_matches_count": 1
+  }
+}

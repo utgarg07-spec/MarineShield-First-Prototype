@@ -1,0 +1,9 @@
+{
+  "data_provider": "COPERNICUS_DATA_SPACE_ECOSYSTEM",
+  "source_archive_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(f65a2541-f4a5-48cf-8e20-5cf65b604a1b)/$value",
+  "source_granule_sha256": "86a34992e014e3f83597489cddb0409f52e4383e299e84f7da88185d82671b29",
+  "ingestion_timestamp": "2026-08-21T11:52:32.736341Z",
+  "execution_duration_seconds": 4.44,
+  "worker_node_id": "test-worker-node-01",
+  "checksum_verified": true
+}

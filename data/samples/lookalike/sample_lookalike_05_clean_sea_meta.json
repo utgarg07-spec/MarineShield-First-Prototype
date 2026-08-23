@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_lookalike_05_clean_sea",
+  "class_label": "CLEAN_WATER",
+  "subcategory": "no_oil/water/clean",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191228T051140",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "prompts": {
+    "box_prompt": [
+      100,
+      100,
+      400,
+      400
+    ],
+    "point_prompt_center": [
+      [
+        256,
+        256
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        200,
+        200
+      ],
+      [
+        300,
+        300
+      ],
+      [
+        100,
+        100
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

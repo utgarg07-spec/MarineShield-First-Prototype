@@ -1,0 +1,288 @@
+{
+  "evaluation_split": "DARTIS-2019-val",
+  "total_val_samples": 10,
+  "oil_samples_count": 5,
+  "lookalike_samples_count": 5,
+  "metrics_comparison": {
+    "oil_segmentation": {
+      "vanilla_sam": {
+        "mean_iou": 0.9862,
+        "mean_dice": 0.993,
+        "mean_precision": 0.9941,
+        "mean_recall": 0.992
+      },
+      "sar_adapted_sam": {
+        "mean_iou": 0.3041,
+        "mean_dice": 0.4155,
+        "mean_precision": 0.4878,
+        "mean_recall": 0.4195
+      }
+    },
+    "lookalike_suppression": {
+      "vanilla_sam": {
+        "false_positive_activation_rate": 1.0,
+        "mean_false_positive_pixels": 69560.8
+      },
+      "sar_adapted_sam": {
+        "false_positive_activation_rate": 0.0,
+        "mean_false_positive_pixels": 0.0
+      }
+    },
+    "latency_benchmarks": {
+      "vanilla_sam_mean_latency_ms": 515.81,
+      "sar_adapted_sam_mean_latency_ms": 473.07
+    }
+  },
+  "per_sample_details": [
+    {
+      "sample_id": "DARTIS-2019-val_oil_01",
+      "class_label": "PETROLEUM_OIL",
+      "is_oil": true,
+      "vanilla_sam": {
+        "iou": 0.9907,
+        "dice": 0.9953,
+        "precision": 1.0,
+        "recall": 0.9907,
+        "predicted_pixels": 27283,
+        "ground_truth_pixels": 27537,
+        "latency_ms": 800.61
+      },
+      "adapted_sam": {
+        "iou": 0.1058,
+        "dice": 0.1913,
+        "precision": 0.5212,
+        "recall": 0.1172,
+        "predicted_pixels": 6192,
+        "ground_truth_pixels": 27537,
+        "latency_ms": 477.51
+      },
+      "iou_improvement": -0.8849,
+      "fp_reduction_pixels": 0
+    },
+    {
+      "sample_id": "DARTIS-2019-val_oil_02",
+      "class_label": "PETROLEUM_OIL",
+      "is_oil": true,
+      "vanilla_sam": {
+        "iou": 0.9833,
+        "dice": 0.9916,
+        "precision": 1.0,
+        "recall": 0.9833,
+        "predicted_pixels": 45867,
+        "ground_truth_pixels": 46644,
+        "latency_ms": 479.39
+      },
+      "adapted_sam": {
+        "iou": 0.6627,
+        "dice": 0.7971,
+        "precision": 0.9373,
+        "recall": 0.6934,
+        "predicted_pixels": 34510,
+        "ground_truth_pixels": 46644,
+        "latency_ms": 465.12
+      },
+      "iou_improvement": -0.3206,
+      "fp_reduction_pixels": 0
+    },
+    {
+      "sample_id": "DARTIS-2019-val_oil_03",
+      "class_label": "PETROLEUM_OIL",
+      "is_oil": true,
+      "vanilla_sam": {
+        "iou": 0.975,
+        "dice": 0.9873,
+        "precision": 0.979,
+        "recall": 0.9958,
+        "predicted_pixels": 13312,
+        "ground_truth_pixels": 13088,
+        "latency_ms": 478.95
+      },
+      "adapted_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 1,
+        "ground_truth_pixels": 13088,
+        "latency_ms": 469.05
+      },
+      "iou_improvement": -0.975,
+      "fp_reduction_pixels": 0
+    },
+    {
+      "sample_id": "DARTIS-2019-val_oil_04",
+      "class_label": "PETROLEUM_OIL",
+      "is_oil": true,
+      "vanilla_sam": {
+        "iou": 0.989,
+        "dice": 0.9945,
+        "precision": 0.9917,
+        "recall": 0.9973,
+        "predicted_pixels": 17298,
+        "ground_truth_pixels": 17202,
+        "latency_ms": 479.8
+      },
+      "adapted_sam": {
+        "iou": 0.3256,
+        "dice": 0.4913,
+        "precision": 0.5068,
+        "recall": 0.4767,
+        "predicted_pixels": 16183,
+        "ground_truth_pixels": 17202,
+        "latency_ms": 468.28
+      },
+      "iou_improvement": -0.6634,
+      "fp_reduction_pixels": 0
+    },
+    {
+      "sample_id": "DARTIS-2019-val_oil_05",
+      "class_label": "PETROLEUM_OIL",
+      "is_oil": true,
+      "vanilla_sam": {
+        "iou": 0.9928,
+        "dice": 0.9964,
+        "precision": 0.9999,
+        "recall": 0.9929,
+        "predicted_pixels": 16155,
+        "ground_truth_pixels": 16270,
+        "latency_ms": 477.14
+      },
+      "adapted_sam": {
+        "iou": 0.4263,
+        "dice": 0.5978,
+        "precision": 0.4736,
+        "recall": 0.81,
+        "predicted_pixels": 27825,
+        "ground_truth_pixels": 16270,
+        "latency_ms": 467.58
+      },
+      "iou_improvement": -0.5665,
+      "fp_reduction_pixels": 0
+    },
+    {
+      "sample_id": "DARTIS-2019-val_lookalike_01",
+      "class_label": "LOW_WIND_AREA",
+      "is_oil": false,
+      "vanilla_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 145940,
+        "ground_truth_pixels": 0,
+        "latency_ms": 484.12
+      },
+      "adapted_sam": {
+        "iou": 1.0,
+        "dice": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "predicted_pixels": 0,
+        "ground_truth_pixels": 0,
+        "latency_ms": 468.91
+      },
+      "iou_improvement": 1.0,
+      "fp_reduction_pixels": 145940
+    },
+    {
+      "sample_id": "DARTIS-2019-val_lookalike_02",
+      "class_label": "BIOGENIC_SLICK",
+      "is_oil": false,
+      "vanilla_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 8989,
+        "ground_truth_pixels": 0,
+        "latency_ms": 482.49
+      },
+      "adapted_sam": {
+        "iou": 1.0,
+        "dice": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "predicted_pixels": 0,
+        "ground_truth_pixels": 0,
+        "latency_ms": 466.04
+      },
+      "iou_improvement": 1.0,
+      "fp_reduction_pixels": 8989
+    },
+    {
+      "sample_id": "DARTIS-2019-val_lookalike_03",
+      "class_label": "INTERNAL_WAVE",
+      "is_oil": false,
+      "vanilla_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 73353,
+        "ground_truth_pixels": 0,
+        "latency_ms": 479.65
+      },
+      "adapted_sam": {
+        "iou": 1.0,
+        "dice": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "predicted_pixels": 0,
+        "ground_truth_pixels": 0,
+        "latency_ms": 474.13
+      },
+      "iou_improvement": 1.0,
+      "fp_reduction_pixels": 73353
+    },
+    {
+      "sample_id": "DARTIS-2019-val_lookalike_04",
+      "class_label": "SHIP_WAKE",
+      "is_oil": false,
+      "vanilla_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 4216,
+        "ground_truth_pixels": 0,
+        "latency_ms": 500.4
+      },
+      "adapted_sam": {
+        "iou": 1.0,
+        "dice": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "predicted_pixels": 0,
+        "ground_truth_pixels": 0,
+        "latency_ms": 494.03
+      },
+      "iou_improvement": 1.0,
+      "fp_reduction_pixels": 4216
+    },
+    {
+      "sample_id": "DARTIS-2019-val_lookalike_05",
+      "class_label": "CLEAN_WATER",
+      "is_oil": false,
+      "vanilla_sam": {
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "predicted_pixels": 115306,
+        "ground_truth_pixels": 0,
+        "latency_ms": 495.57
+      },
+      "adapted_sam": {
+        "iou": 1.0,
+        "dice": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "predicted_pixels": 0,
+        "ground_truth_pixels": 0,
+        "latency_ms": 480.1
+      },
+      "iou_improvement": 1.0,
+      "fp_reduction_pixels": 115306
+    }
+  ]
+}

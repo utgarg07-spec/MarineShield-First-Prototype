@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_lookalike_03_internal_wave_c2",
+  "class_label": "INTERNAL_WAVE",
+  "subcategory": "no_oil/water/c2",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191202T051145",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "prompts": {
+    "box_prompt": [
+      100,
+      120,
+      420,
+      390
+    ],
+    "point_prompt_center": [
+      [
+        256,
+        256
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        200,
+        256
+      ],
+      [
+        300,
+        256
+      ],
+      [
+        50,
+        50
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

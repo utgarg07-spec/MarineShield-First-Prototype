@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_oil_01_linear_slick",
+  "class_label": "PETROLEUM_OIL",
+  "subcategory": "oil/water",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191114T051218",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 15725,
+  "prompts": {
+    "box_prompt": [
+      80,
+      70,
+      440,
+      410
+    ],
+    "point_prompt_center": [
+      [
+        260,
+        248
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        160,
+        168
+      ],
+      [
+        340,
+        312
+      ],
+      [
+        260,
+        100
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

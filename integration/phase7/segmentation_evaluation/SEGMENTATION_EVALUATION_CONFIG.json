@@ -1,0 +1,18 @@
+{
+  "evaluation_timestamp": "2026-08-21T19:34:17Z",
+  "dataset_name": "DARTIS-2019",
+  "dataset_version": "DARTIS-2019-v1.0",
+  "split_name": "DARTIS-2019-val",
+  "split_manifest_path": "data\\dartis_val\\manifest.json",
+  "production_model_version": "sam-vit-b-sar-adapter-v1.0.0",
+  "vanilla_baseline_version": "sam-vit-b-vanilla-baseline-v1.0.0",
+  "base_sam_checkpoint": "models\\checkpoints\\sam_vit_b_01ec64.pth",
+  "adapter_checkpoint": "models\\adapted\\sar_sam_adapter_best.pth",
+  "base_sam_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+  "adapter_sha256": "7ddecf168946efae909f4eb6480c5d9e5cf5fe22727345cf7f3bb477ba1a9547",
+  "hardware": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "pytorch_version": "2.11.0+cu128"
+  }
+}

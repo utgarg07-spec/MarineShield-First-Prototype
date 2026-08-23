@@ -1,0 +1,129 @@
+{
+  "scenario_id": "SCENARIO-02-TWO-EQUALLY-PLAUSIBLE-CANDIDATES",
+  "description": "Two tankers transit the same traffic lane through the release polygon within 12 minutes of each other, creating an ambiguous candidate ranking that requires analyst review.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c002",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-002",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c002",
+    "spill_geometry_id": "spill-geom-002",
+    "hypothesis_state": "EVALUATED",
+    "discharge_modality": "SINGLE_DISCHARGE",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T14:00:00Z",
+      "t_earliest_utc": "2026-08-20T08:00:00Z",
+      "t_most_likely_utc": "2026-08-20T10:30:00Z",
+      "t_latest_utc": "2026-08-20T13:00:00Z",
+      "window_duration_hours": 5.0
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [73.10, 15.20],
+              [73.30, 15.20],
+              [73.30, 15.40],
+              [73.10, 15.40],
+              [73.10, 15.20]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 44.0,
+          "centroid_lon": 73.20,
+          "centroid_lat": 15.30
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-02-vessel-alpha",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "352111000",
+        "vessel_name": "STAR VOYAGER",
+        "vessel_type": "CHEMICAL_TANKER",
+        "vessel_flag": "LR"
+      },
+      "component_scores": {
+        "spatial": 88.0,
+        "temporal": 85.0,
+        "trajectory": 82.0,
+        "drift": 80.0,
+        "vessel": 80.0,
+        "behavior": 70.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 81.15,
+      "evidence_strength": "STRONG_COMPATIBILITY",
+      "ranking_position": 1,
+      "counterfactual_analysis": {
+        "delta_score_without_this_candidate": 1.35,
+        "ranking_stability": "AMBIGUOUS_CLOSE_ALTERNATIVES"
+      },
+      "supporting_evidence": [
+        "Transited release polygon centroid at 2026-08-20T10:24:00Z",
+        "Backward drift convergence 80%"
+      ],
+      "contradictory_evidence": []
+    },
+    {
+      "source_hypothesis_id": "src-hyp-02-vessel-beta",
+      "hypothesis_label": "H_2",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "636092000",
+        "vessel_name": "OCEAN PIONEER",
+        "vessel_type": "OIL_PRODUCTS_TANKER",
+        "vessel_flag": "MH"
+      },
+      "component_scores": {
+        "spatial": 86.0,
+        "temporal": 84.0,
+        "trajectory": 80.0,
+        "drift": 79.0,
+        "vessel": 80.0,
+        "behavior": 70.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 79.80,
+      "evidence_strength": "STRONG_COMPATIBILITY",
+      "ranking_position": 2,
+      "counterfactual_analysis": {
+        "delta_score_without_this_candidate": 0.0,
+        "ranking_stability": "AMBIGUOUS_CLOSE_ALTERNATIVES"
+      },
+      "supporting_evidence": [
+        "Transited release polygon centroid at 2026-08-20T10:36:00Z (12 minutes after H_1)",
+        "Backward drift convergence 79%"
+      ],
+      "contradictory_evidence": []
+    },
+    {
+      "source_hypothesis_id": "src-hyp-02-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "Unknown / Unresolved origin"
+      },
+      "evidence_score": 25.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 3
+    }
+  ],
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-02-vessel-alpha",
+    "top_hypothesis_category": "VESSEL_IDENTIFIED",
+    "top_evidence_score": 81.15,
+    "top_evidence_strength": "STRONG_COMPATIBILITY",
+    "ranking_stability": "AMBIGUOUS_CLOSE_ALTERNATIVES",
+    "score_margin_over_second": 1.35,
+    "is_unknown_triggered": false,
+    "active_contradictions_count": 0
+  }
+}

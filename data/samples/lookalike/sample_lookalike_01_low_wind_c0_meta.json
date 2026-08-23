@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_lookalike_01_low_wind_c0",
+  "class_label": "LOW_WIND_AREA",
+  "subcategory": "no_oil/water/c0",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191105T051110",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "prompts": {
+    "box_prompt": [
+      80,
+      80,
+      430,
+      430
+    ],
+    "point_prompt_center": [
+      [
+        256,
+        256
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        200,
+        200
+      ],
+      [
+        300,
+        300
+      ],
+      [
+        50,
+        50
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

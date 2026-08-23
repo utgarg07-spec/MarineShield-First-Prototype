@@ -1,0 +1,101 @@
+{
+  "scenario_id": "SCENARIO-04-AIS-GAP-ANOMALY",
+  "description": "Vessel trajectory exhibits a 52-minute AIS transmission blackout directly spanning the reconstructed release zone with an associated speed drop from 14.2 to 5.8 knots.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c004",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-004",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c004",
+    "spill_geometry_id": "spill-geom-004",
+    "hypothesis_state": "EVALUATED",
+    "discharge_modality": "SINGLE_DISCHARGE",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T22:00:00Z",
+      "t_earliest_utc": "2026-08-20T16:00:00Z",
+      "t_most_likely_utc": "2026-08-20T18:30:00Z",
+      "t_latest_utc": "2026-08-20T21:00:00Z",
+      "window_duration_hours": 5.0
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [74.20, 13.80],
+              [74.40, 13.80],
+              [74.40, 14.00],
+              [74.20, 14.00],
+              [74.20, 13.80]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 45.2,
+          "centroid_lon": 74.30,
+          "centroid_lat": 13.90
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-04-vessel-gap",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "371999000",
+        "vessel_name": "NEPTUNE TRADER",
+        "vessel_type": "BULK_CARRIER",
+        "vessel_flag": "PA"
+      },
+      "component_scores": {
+        "spatial": 85.0,
+        "temporal": 90.0,
+        "trajectory": 85.0,
+        "drift": 82.0,
+        "vessel": 75.0,
+        "behavior": 95.0,
+        "contradiction": 5.0
+      },
+      "evidence_score": 84.15,
+      "evidence_strength": "STRONG_COMPATIBILITY",
+      "ranking_position": 1,
+      "counterfactual_analysis": {
+        "delta_score_without_this_candidate": 54.15,
+        "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS"
+      },
+      "supporting_evidence": [
+        "Interpolated track segment intersects release polygon centroid",
+        "AIS transmission gap of 52 minutes begins 18:04Z and ends 18:56Z spanning t_most_likely_utc",
+        "Speed dropped from 14.2 knots pre-gap to 5.8 knots post-gap inside release zone",
+        "PyGNOME backward drift convergence 82%"
+      ],
+      "contradictory_evidence": [
+        "AIS gap creates position uncertainty during 52 minutes"
+      ]
+    },
+    {
+      "source_hypothesis_id": "src-hyp-04-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "Unresolved source"
+      },
+      "evidence_score": 30.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 2
+    }
+  ],
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-04-vessel-gap",
+    "top_hypothesis_category": "VESSEL_IDENTIFIED",
+    "top_evidence_score": 84.15,
+    "top_evidence_strength": "STRONG_COMPATIBILITY",
+    "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS",
+    "is_unknown_triggered": false,
+    "active_contradictions_count": 0,
+    "behavioral_anomaly_detected": true
+  }
+}

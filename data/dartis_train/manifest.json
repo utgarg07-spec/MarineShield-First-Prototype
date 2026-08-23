@@ -1,0 +1,408 @@
+{
+  "split": "DARTIS-2019-train",
+  "total_samples": 20,
+  "oil_samples": 10,
+  "lookalike_samples": 10,
+  "samples": [
+    {
+      "sample_id": "DARTIS-2019-train_oil_01",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 17036,
+      "box_prompt": [
+        182,
+        127,
+        345,
+        278
+      ],
+      "center_point": [
+        263,
+        202
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_02",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 37973,
+      "box_prompt": [
+        45,
+        100,
+        205,
+        400
+      ],
+      "center_point": [
+        125,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_03",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 13088,
+      "box_prompt": [
+        51,
+        150,
+        459,
+        350
+      ],
+      "center_point": [
+        255,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_04",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 14152,
+      "box_prompt": [
+        61,
+        37,
+        449,
+        283
+      ],
+      "center_point": [
+        255,
+        160
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_05",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 13585,
+      "box_prompt": [
+        147,
+        173,
+        316,
+        292
+      ],
+      "center_point": [
+        231,
+        232
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_06",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 45448,
+      "box_prompt": [
+        57,
+        100,
+        217,
+        400
+      ],
+      "center_point": [
+        137,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_07",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 13088,
+      "box_prompt": [
+        51,
+        166,
+        459,
+        334
+      ],
+      "center_point": [
+        255,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_08",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 14505,
+      "box_prompt": [
+        61,
+        89,
+        414,
+        511
+      ],
+      "center_point": [
+        237,
+        300
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_09",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 22532,
+      "box_prompt": [
+        157,
+        143,
+        355,
+        306
+      ],
+      "center_point": [
+        256,
+        224
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_oil_10",
+      "class_label": "PETROLEUM_OIL",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 42159,
+      "box_prompt": [
+        68,
+        100,
+        228,
+        400
+      ],
+      "center_point": [
+        148,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_01",
+      "class_label": "LOW_WIND_AREA",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        80,
+        80,
+        430,
+        430
+      ],
+      "center_point": [
+        255,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_02",
+      "class_label": "BIOGENIC_SLICK",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        80,
+        80,
+        430,
+        430
+      ],
+      "center_point": [
+        255,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_03",
+      "class_label": "INTERNAL_WAVE",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        120,
+        420,
+        390
+      ],
+      "center_point": [
+        260,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_04",
+      "class_label": "SHIP_WAKE",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        200,
+        450,
+        310
+      ],
+      "center_point": [
+        275,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_05",
+      "class_label": "CLEAN_WATER",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        100,
+        400,
+        400
+      ],
+      "center_point": [
+        250,
+        250
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_06",
+      "class_label": "LOW_WIND_AREA",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        80,
+        80,
+        430,
+        430
+      ],
+      "center_point": [
+        255,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_07",
+      "class_label": "BIOGENIC_SLICK",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        80,
+        80,
+        430,
+        430
+      ],
+      "center_point": [
+        255,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_08",
+      "class_label": "INTERNAL_WAVE",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        120,
+        420,
+        390
+      ],
+      "center_point": [
+        260,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_09",
+      "class_label": "SHIP_WAKE",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        200,
+        450,
+        310
+      ],
+      "center_point": [
+        275,
+        255
+      ]
+    },
+    {
+      "sample_id": "DARTIS-2019-train_lookalike_10",
+      "class_label": "CLEAN_WATER",
+      "split": "DARTIS-2019-train",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "box_prompt": [
+        100,
+        100,
+        400,
+        400
+      ],
+      "center_point": [
+        250,
+        250
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_lookalike_04_ship_wake_c4",
+  "class_label": "SHIP_WAKE",
+  "subcategory": "no_oil/water/c4",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191216T052028",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "prompts": {
+    "box_prompt": [
+      100,
+      200,
+      450,
+      310
+    ],
+    "point_prompt_center": [
+      [
+        275,
+        256
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        200,
+        256
+      ],
+      [
+        350,
+        256
+      ],
+      [
+        275,
+        100
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

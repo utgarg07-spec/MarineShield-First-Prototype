@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_oil_04_weathered_ribbon",
+  "class_label": "PETROLEUM_OIL",
+  "subcategory": "oil/water",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191214T052012",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 11452,
+  "prompts": {
+    "box_prompt": [
+      50,
+      110,
+      460,
+      290
+    ],
+    "point_prompt_center": [
+      [
+        255,
+        200
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        150,
+        250
+      ],
+      [
+        350,
+        150
+      ],
+      [
+        255,
+        380
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

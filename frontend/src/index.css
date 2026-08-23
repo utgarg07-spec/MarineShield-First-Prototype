@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-marine-navy: #0B132B;
+  --color-marine-navy-dark: #050A1F;
+  --color-marine-blue: #1C3F60;
+  --color-marine-cyan: #00E5FF;
+  --color-marine-green: #00C853;
+  --color-marine-amber: #FFAB00;
+  --color-marine-red: #D50000;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-marine-navy-dark);
+    color: white;
+    font-family: var(--font-sans);
+  }
+}

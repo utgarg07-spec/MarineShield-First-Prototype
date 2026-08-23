@@ -1,0 +1,130 @@
+{
+  "incident_id": "phase6-val-inc-20260821-001",
+  "tile_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2_tile_r000_c000_train",
+  "sar_granule_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2",
+  "status": "LOOKALIKE_REJECTED",
+  "is_abstained": false,
+  "abstention_details": null,
+  "spill_mask": {
+    "mask_id": "a1a9421f-4f9e-4a7b-82be-e8e5da690901",
+    "incident_id": "phase6-val-inc-20260821-001",
+    "tile_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2_tile_r000_c000_train",
+    "sar_granule_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2",
+    "mask_type": "PROBABILITY",
+    "tile_size_px": 512,
+    "tile_crs": "EPSG:4326",
+    "binarization_threshold": 0.5,
+    "model_confidence": {
+      "mean_oil_probability": 0.5152,
+      "pixel_coverage_fraction": 0.0
+    },
+    "data_quality": {
+      "index": 0.95,
+      "component_scores": {
+        "noise_floor_score": 1.0,
+        "incidence_angle_score": 1.0,
+        "wind_context_score": 1.0,
+        "scene_completeness_score": 1.0,
+        "temporal_freshness_score": 1.0
+      },
+      "quality_flags": [],
+      "dqi_computation_version": "dqi-sar-v1.0.0"
+    },
+    "created_at_utc": "2026-08-21T17:23:45Z"
+  },
+  "spill_geometry": null,
+  "lookalike_verification": {
+    "verification_id": "ff56293d-0b39-4862-ba94-9e6fb5fe7633",
+    "candidate_id": "9ad0f0a0-4e29-4b8a-a6fe-8db9768c36e9",
+    "sar_granule_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2",
+    "predicted_class": "LOW_WIND_AREA",
+    "class_probabilities": {
+      "PETROLEUM_OIL": 0.0017,
+      "BIOGENIC_SLICK": 0.0337,
+      "LOW_WIND_AREA": 0.9139,
+      "SHIP_WAKE": 0.0124,
+      "NATURAL_FILM": 0.0337,
+      "UNCERTAIN": 0.0046
+    },
+    "model_confidence": {
+      "max_class_probability": 0.9139,
+      "entropy": 0.5783,
+      "margin": 0.8802
+    },
+    "pipeline_decision": "REJECT_AS_LOOKALIKE",
+    "created_at_utc": "2026-08-21T17:23:45Z"
+  },
+  "severity": {
+    "severity_id": "44339007-4421-49ce-8fd0-a68f0a3b1645",
+    "severity_class": "UNKNOWN",
+    "severity_basis": {
+      "mean_backscatter_db": 0.56,
+      "backscatter_suppression_db": 0.3,
+      "estimated_area_km2": 0.0,
+      "texture_features_used": false
+    },
+    "model_confidence": {
+      "severity_class_probability": 1.0,
+      "class_probabilities": {
+        "SHEEN": 0.0,
+        "MODERATE": 0.0,
+        "THICK_HIGH_SEVERITY": 0.0,
+        "UNKNOWN": 1.0
+      }
+    },
+    "explicit_non_claims": [
+      "This classification does not represent estimated oil volume in tonnes or litres.",
+      "This classification does not constitute ecological damage assessment.",
+      "This classification does not imply legal severity of a MARPOL violation."
+    ],
+    "created_at_utc": "2026-08-21T17:23:45Z"
+  },
+  "data_quality": {
+    "index": 0.95,
+    "component_scores": {
+      "noise_floor_score": 1.0,
+      "incidence_angle_score": 1.0,
+      "wind_context_score": 1.0,
+      "scene_completeness_score": 1.0,
+      "temporal_freshness_score": 1.0
+    },
+    "quality_flags": [],
+    "dqi_computation_version": "dqi-sar-v1.0.0"
+  },
+  "metrics_metadata_ref": "METRICS-SAR-SAM-ADAPT-v1.0",
+  "provenance": {
+    "sar_scene": {
+      "granule_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2",
+      "polarization": "VV_VH",
+      "source_api": "Copernicus Sentinel-1 SAR"
+    },
+    "preprocessing": {
+      "pipeline_version": "sar-prep-v1.0.0",
+      "processing_steps_applied": [
+        "RADIOMETRIC_CALIBRATION_SIGMA0",
+        "DB_CONVERSION",
+        "SPECKLE_FILTERING_REFINED_LEE",
+        "DETERMINISTIC_TILING_AND_NORMALIZATION"
+      ]
+    },
+    "model": {
+      "model_version_id": "sam-vit-b-sar-adapter-v1.0.0",
+      "module": "OIL_INTELLIGENCE_DUAL_STAGE",
+      "inference_timestamp_utc": "2026-08-21T17:23:45Z",
+      "inference_device": "cuda (PyTorch)",
+      "inference_framework_version": "torch 2.11.0+cu128"
+    },
+    "training_dataset": {
+      "dataset_version_id": "DARTIS-2019-v1.0",
+      "dataset_name": "DARTIS-2019"
+    },
+    "pipeline_parameters": {
+      "tile_size_px": 512,
+      "binarization_threshold": 0.5,
+      "minimum_slick_area_px": 50,
+      "adapter_bottleneck_channels": 64
+    },
+    "request_id": "eaa83029-c40a-4f51-b24a-3f8151501ecf"
+  },
+  "created_at_utc": "2026-08-21T17:23:45Z"
+}

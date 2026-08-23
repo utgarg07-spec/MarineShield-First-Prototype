@@ -1,0 +1,20 @@
+{
+  "sample_id": "DARTIS-2019-val_oil_04",
+  "class_label": "PETROLEUM_OIL",
+  "split": "DARTIS-2019-val",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 17202,
+  "box_prompt": [
+    61,
+    66,
+    449,
+    397
+  ],
+  "center_point": [
+    255,
+    231
+  ]
+}

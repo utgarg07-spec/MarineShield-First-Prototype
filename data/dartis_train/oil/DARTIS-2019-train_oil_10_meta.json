@@ -1,0 +1,20 @@
+{
+  "sample_id": "DARTIS-2019-train_oil_10",
+  "class_label": "PETROLEUM_OIL",
+  "split": "DARTIS-2019-train",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 42159,
+  "box_prompt": [
+    68,
+    100,
+    228,
+    400
+  ],
+  "center_point": [
+    148,
+    250
+  ]
+}

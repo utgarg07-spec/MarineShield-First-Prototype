@@ -1,0 +1,489 @@
+{
+  "manifest_version": "1.0.0",
+  "total_samples": 10,
+  "oil_samples": 5,
+  "lookalike_samples": 5,
+  "split": "DARTIS-2019-test",
+  "samples": [
+    {
+      "sample_id": "sample_oil_01_linear_slick",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191114T051218",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 15725,
+      "prompts": {
+        "box_prompt": [
+          80,
+          70,
+          440,
+          410
+        ],
+        "point_prompt_center": [
+          [
+            260,
+            248
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            160,
+            168
+          ],
+          [
+            340,
+            312
+          ],
+          [
+            260,
+            100
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_oil_02_cohesive_patch",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191126T052044",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 22435,
+      "prompts": {
+        "box_prompt": [
+          146,
+          191,
+          366,
+          321
+        ],
+        "point_prompt_center": [
+          [
+            256,
+            256
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            220,
+            250
+          ],
+          [
+            290,
+            260
+          ],
+          [
+            256,
+            120
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_oil_03_coastal_slick",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/coast",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191208T051130",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 38850,
+      "prompts": {
+        "box_prompt": [
+          60,
+          120,
+          210,
+          380
+        ],
+        "point_prompt_center": [
+          [
+            135,
+            250
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            350,
+            250
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_oil_04_weathered_ribbon",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191214T052012",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 11452,
+      "prompts": {
+        "box_prompt": [
+          50,
+          110,
+          460,
+          290
+        ],
+        "point_prompt_center": [
+          [
+            255,
+            200
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            150,
+            250
+          ],
+          [
+            350,
+            150
+          ],
+          [
+            255,
+            380
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_oil_05_multi_fragment",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191220T051155",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 12639,
+      "prompts": {
+        "box_prompt": [
+          140,
+          140,
+          415,
+          375
+        ],
+        "point_prompt_center": [
+          [
+            280,
+            250
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            180,
+            180
+          ],
+          [
+            280,
+            250
+          ],
+          [
+            280,
+            80
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_01_low_wind_c0",
+      "class_label": "LOW_WIND_AREA",
+      "subcategory": "no_oil/water/c0",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191105T051110",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "prompts": {
+        "box_prompt": [
+          80,
+          80,
+          430,
+          430
+        ],
+        "point_prompt_center": [
+          [
+            256,
+            256
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            200,
+            200
+          ],
+          [
+            300,
+            300
+          ],
+          [
+            50,
+            50
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_02_biogenic_c1",
+      "class_label": "BIOGENIC_SLICK",
+      "subcategory": "no_oil/water/c1",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191118T052033",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "prompts": {
+        "box_prompt": [
+          80,
+          80,
+          430,
+          430
+        ],
+        "point_prompt_center": [
+          [
+            280,
+            220
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            280,
+            220
+          ],
+          [
+            220,
+            280
+          ],
+          [
+            100,
+            100
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_03_internal_wave_c2",
+      "class_label": "INTERNAL_WAVE",
+      "subcategory": "no_oil/water/c2",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191202T051145",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "prompts": {
+        "box_prompt": [
+          100,
+          120,
+          420,
+          390
+        ],
+        "point_prompt_center": [
+          [
+            256,
+            256
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            200,
+            256
+          ],
+          [
+            300,
+            256
+          ],
+          [
+            50,
+            50
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_04_ship_wake_c4",
+      "class_label": "SHIP_WAKE",
+      "subcategory": "no_oil/water/c4",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191216T052028",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "prompts": {
+        "box_prompt": [
+          100,
+          200,
+          450,
+          310
+        ],
+        "point_prompt_center": [
+          [
+            275,
+            256
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            200,
+            256
+          ],
+          [
+            350,
+            256
+          ],
+          [
+            275,
+            100
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_05_clean_sea",
+      "class_label": "CLEAN_WATER",
+      "subcategory": "no_oil/water/clean",
+      "split": "DARTIS-2019-test",
+      "parent_scene_id": "S1A_IW_GRDH_1SDV_20191228T051140",
+      "dimensions": [
+        512,
+        512
+      ],
+      "oil_pixel_count": 0,
+      "prompts": {
+        "box_prompt": [
+          100,
+          100,
+          400,
+          400
+        ],
+        "point_prompt_center": [
+          [
+            256,
+            256
+          ]
+        ],
+        "point_labels_center": [
+          1
+        ],
+        "multi_point_prompts": [
+          [
+            200,
+            200
+          ],
+          [
+            300,
+            300
+          ],
+          [
+            100,
+            100
+          ]
+        ],
+        "multi_point_labels": [
+          1,
+          1,
+          0
+        ]
+      }
+    }
+  ]
+}

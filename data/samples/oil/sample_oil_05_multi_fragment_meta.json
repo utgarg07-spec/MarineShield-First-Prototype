@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_oil_05_multi_fragment",
+  "class_label": "PETROLEUM_OIL",
+  "subcategory": "oil/water",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191220T051155",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 12639,
+  "prompts": {
+    "box_prompt": [
+      140,
+      140,
+      415,
+      375
+    ],
+    "point_prompt_center": [
+      [
+        280,
+        250
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        180,
+        180
+      ],
+      [
+        280,
+        250
+      ],
+      [
+        280,
+        80
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

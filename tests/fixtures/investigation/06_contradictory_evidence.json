@@ -1,0 +1,109 @@
+{
+  "scenario_id": "SCENARIO-06-CONTRADICTORY-EVIDENCE",
+  "description": "A candidate vessel is geographically nearby in the morning, but port terrestrial AIS receiver confirms vessel was tied to quay during the release window, triggering an active TEMPORAL_IMPOSSIBILITY contradiction.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c006",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-006",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c006",
+    "spill_geometry_id": "spill-geom-006",
+    "hypothesis_state": "EVALUATED",
+    "discharge_modality": "SINGLE_DISCHARGE",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T16:00:00Z",
+      "t_earliest_utc": "2026-08-20T10:00:00Z",
+      "t_most_likely_utc": "2026-08-20T12:30:00Z",
+      "t_latest_utc": "2026-08-20T15:00:00Z",
+      "window_duration_hours": 5.0
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [72.70, 18.80],
+              [72.90, 18.80],
+              [72.90, 19.00],
+              [72.70, 19.00],
+              [72.70, 18.80]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 38.0,
+          "centroid_lon": 72.80,
+          "centroid_lat": 18.90
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-06-vessel-contradicted",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "413666000",
+        "vessel_name": "ISLAND CARRIER",
+        "vessel_type": "OIL_TANKER"
+      },
+      "component_scores": {
+        "spatial": 70.0,
+        "temporal": 20.0,
+        "trajectory": 40.0,
+        "drift": 30.0,
+        "vessel": 80.0,
+        "behavior": 30.0,
+        "contradiction": 80.0
+      },
+      "evidence_score": 28.50,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 1,
+      "counterfactual_analysis": {
+        "delta_score_without_this_candidate": 0.0,
+        "ranking_stability": "FRAGILE_RANKING"
+      },
+      "supporting_evidence": [
+        "Vessel operates within Mumbai port approaches"
+      ],
+      "contradictory_evidence": [
+        "Terrestrial AIS station BOM-01 recorded vessel moored at Jawahar Dweep Berth #3 from 08:15Z to 16:45Z (speed: 0.0 knots)",
+        "Transit to release zone would require impossible transit speed > 45 knots"
+      ]
+    },
+    {
+      "source_hypothesis_id": "src-hyp-06-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "True source unresolved"
+      },
+      "evidence_score": 0.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 2
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra-06-001",
+      "target_hypothesis_id": "src-hyp-06-vessel-contradicted",
+      "contradiction_type": "TEMPORAL_IMPOSSIBILITY",
+      "conflict_description": {
+        "assertion_text": "Vessel was moored at berth throughout release window [10:00Z - 15:00Z]",
+        "severity_penalty_weight": 0.50
+      },
+      "non_suppression_status": "ACTIVE_UNRESOLVED"
+    }
+  ],
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-06-unknown",
+    "top_hypothesis_category": "UNKNOWN_SOURCE",
+    "top_evidence_score": 28.50,
+    "top_evidence_strength": "INSUFFICIENT_EVIDENCE",
+    "is_unknown_triggered": true,
+    "active_contradictions_count": 1,
+    "contradiction_penalty_applied": 16.0
+  }
+}

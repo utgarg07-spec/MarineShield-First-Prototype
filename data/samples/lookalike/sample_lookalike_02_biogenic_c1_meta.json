@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_lookalike_02_biogenic_c1",
+  "class_label": "BIOGENIC_SLICK",
+  "subcategory": "no_oil/water/c1",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191118T052033",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "prompts": {
+    "box_prompt": [
+      80,
+      80,
+      430,
+      430
+    ],
+    "point_prompt_center": [
+      [
+        280,
+        220
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        280,
+        220
+      ],
+      [
+        220,
+        280
+      ],
+      [
+        100,
+        100
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

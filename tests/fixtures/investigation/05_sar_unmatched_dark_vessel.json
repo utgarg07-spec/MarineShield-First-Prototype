@@ -1,0 +1,121 @@
+{
+  "scenario_id": "SCENARIO-05-SAR-UNMATCHED-DARK-VESSEL",
+  "description": "A 175-meter vessel target is detected directly in Sentinel-1 SAR imagery near the apex of the slick, but no correlated AIS broadcast exists within a 15 km radius.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c005",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-005",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c005",
+    "spill_geometry_id": "spill-geom-005",
+    "hypothesis_state": "EVALUATED",
+    "discharge_modality": "SINGLE_DISCHARGE",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T05:30:00Z",
+      "t_earliest_utc": "2026-08-20T02:00:00Z",
+      "t_most_likely_utc": "2026-08-20T04:30:00Z",
+      "t_latest_utc": "2026-08-20T05:20:00Z",
+      "window_duration_hours": 3.33
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [80.30, 12.80],
+              [80.50, 12.80],
+              [80.50, 13.00],
+              [80.30, 13.00],
+              [80.30, 12.80]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 32.0,
+          "centroid_lon": 80.40,
+          "centroid_lat": 12.90
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-05-dark-vessel",
+      "hypothesis_label": "H_dark_vessel",
+      "source_category": "VESSEL_UNTRACKED_DARK",
+      "candidate_entity": {
+        "vessel_mmsi": null,
+        "sar_vessel_detection_id": "sar-det-s1a-20260820-0042",
+        "description": "SAR-detected uncooperative vessel (estimated length: 175m, radar RCS: 42.1 dB)"
+      },
+      "component_scores": {
+        "spatial": 95.0,
+        "temporal": 90.0,
+        "trajectory": 80.0,
+        "drift": 85.0,
+        "vessel": 80.0,
+        "behavior": 85.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 86.25,
+      "evidence_strength": "STRONG_COMPATIBILITY",
+      "ranking_position": 1,
+      "counterfactual_analysis": {
+        "delta_score_without_this_candidate": 61.25,
+        "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS"
+      },
+      "supporting_evidence": [
+        "SAR vessel detection #0042 located 0.6 km from slick apex at time of acquisition (05:30Z)",
+        "Reconciliation engine confirms zero AIS broadcasts within 15 km of SAR detection",
+        "Backward particle drift aligns with observed vessel wake angle"
+      ],
+      "contradictory_evidence": [
+        "Zero AIS track history; velocity vector inferred from radar wake only"
+      ]
+    },
+    {
+      "source_hypothesis_id": "src-hyp-05-vessel-ais",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "412888000",
+        "vessel_name": "BAY STAR",
+        "vessel_type": "FISHING_VESSEL"
+      },
+      "component_scores": {
+        "spatial": 25.0,
+        "temporal": 40.0,
+        "trajectory": 20.0,
+        "drift": 15.0,
+        "vessel": 25.0,
+        "behavior": 25.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 25.00,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 2
+    },
+    {
+      "source_hypothesis_id": "src-hyp-05-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "Non-vessel or unresolved source"
+      },
+      "evidence_score": 20.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 3
+    }
+  ],
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-05-dark-vessel",
+    "top_hypothesis_category": "VESSEL_UNTRACKED_DARK",
+    "top_evidence_score": 86.25,
+    "top_evidence_strength": "STRONG_COMPATIBILITY",
+    "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS",
+    "is_unknown_triggered": false,
+    "active_contradictions_count": 0,
+    "unmatched_sar_target": true
+  }
+}

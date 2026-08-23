@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_oil_03_coastal_slick",
+  "class_label": "PETROLEUM_OIL",
+  "subcategory": "oil/coast",
+  "split": "DARTIS-2019-test",
+  "parent_scene_id": "S1A_IW_GRDH_1SDV_20191208T051130",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 38850,
+  "prompts": {
+    "box_prompt": [
+      60,
+      120,
+      210,
+      380
+    ],
+    "point_prompt_center": [
+      [
+        135,
+        250
+      ]
+    ],
+    "point_labels_center": [
+      1
+    ],
+    "multi_point_prompts": [
+      [
+        100,
+        200
+      ],
+      [
+        150,
+        300
+      ],
+      [
+        350,
+        250
+      ]
+    ],
+    "multi_point_labels": [
+      1,
+      1,
+      0
+    ]
+  }
+}

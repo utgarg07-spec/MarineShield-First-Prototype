@@ -1,0 +1,483 @@
+{
+  "experiment_id": "EXP-01-SAM-VIT-B-SAR-BASELINE",
+  "timestamp_utc": "2026-08-20T19:44:42Z",
+  "model_architecture": "Segment Anything Model (SAM) \u2014 ViT-B Backbone",
+  "model_checkpoint": "sam_vit_b_01ec64.pth",
+  "model_parameters_m": 93.7,
+  "dataset_version_id": "DARTIS-2019-test",
+  "split": "TEST_BENCHMARK",
+  "hardware": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "peak_vram_allocated_mb": 2772.21
+  },
+  "summary_metrics_by_prompt": {
+    "box_prompt": {
+      "oil_samples": {
+        "mean_iou": 0.9863,
+        "mean_dice": 0.9931,
+        "mean_precision": 0.9918,
+        "mean_recall": 0.9945
+      },
+      "lookalike_samples": {
+        "false_positive_activation_rate": 1.0,
+        "mean_false_positive_pixels_per_patch": 75426.4
+      },
+      "timing_benchmarks": {
+        "mean_total_latency_ms": 567.11
+      }
+    },
+    "point_prompt_center": {
+      "oil_samples": {
+        "mean_iou": 0.6952,
+        "mean_dice": 0.7309,
+        "mean_precision": 0.7987,
+        "mean_recall": 0.6964
+      },
+      "lookalike_samples": {
+        "false_positive_activation_rate": 1.0,
+        "mean_false_positive_pixels_per_patch": 208508.4
+      },
+      "timing_benchmarks": {
+        "mean_total_latency_ms": 507.72
+      }
+    },
+    "multi_point_prompts": {
+      "oil_samples": {
+        "mean_iou": 0.7835,
+        "mean_dice": 0.8297,
+        "mean_precision": 0.8283,
+        "mean_recall": 0.9516
+      },
+      "lookalike_samples": {
+        "false_positive_activation_rate": 1.0,
+        "mean_false_positive_pixels_per_patch": 203993.8
+      },
+      "timing_benchmarks": {
+        "mean_total_latency_ms": 496.76
+      }
+    }
+  },
+  "per_sample_evaluations": [
+    {
+      "sample_id": "sample_oil_01_linear_slick",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "is_oil": true,
+      "embedding_time_ms": 1148.2,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.988,
+          "dice": 0.9939,
+          "precision": 0.9905,
+          "recall": 0.9974,
+          "predicted_pixels": 15834,
+          "ground_truth_pixels": 15725,
+          "decode_time_ms": 223.51,
+          "total_time_ms": 1371.71,
+          "sam_confidence_score": 0.9961000084877014
+        },
+        "point_prompt_center": {
+          "iou": 0.9895,
+          "dice": 0.9947,
+          "precision": 0.9943,
+          "recall": 0.9951,
+          "predicted_pixels": 15737,
+          "ground_truth_pixels": 15725,
+          "decode_time_ms": 117.29,
+          "total_time_ms": 1265.49,
+          "sam_confidence_score": 1.0029000043869019
+        },
+        "multi_point_prompts": {
+          "iou": 0.1651,
+          "dice": 0.2834,
+          "precision": 0.1656,
+          "recall": 0.9818,
+          "predicted_pixels": 93243,
+          "ground_truth_pixels": 15725,
+          "decode_time_ms": 9.54,
+          "total_time_ms": 1157.74,
+          "sam_confidence_score": 1.0049999952316284
+        }
+      }
+    },
+    {
+      "sample_id": "sample_oil_02_cohesive_patch",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "is_oil": true,
+      "embedding_time_ms": 414.23,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.9922,
+          "dice": 0.9961,
+          "precision": 1.0,
+          "recall": 0.9922,
+          "predicted_pixels": 22262,
+          "ground_truth_pixels": 22435,
+          "decode_time_ms": 63.24,
+          "total_time_ms": 477.46,
+          "sam_confidence_score": 0.9994000196456909
+        },
+        "point_prompt_center": {
+          "iou": 0.991,
+          "dice": 0.9955,
+          "precision": 1.0,
+          "recall": 0.9911,
+          "predicted_pixels": 22236,
+          "ground_truth_pixels": 22435,
+          "decode_time_ms": 9.69,
+          "total_time_ms": 423.92,
+          "sam_confidence_score": 1.0214999914169312
+        },
+        "multi_point_prompts": {
+          "iou": 0.9883,
+          "dice": 0.9941,
+          "precision": 1.0,
+          "recall": 0.9884,
+          "predicted_pixels": 22175,
+          "ground_truth_pixels": 22435,
+          "decode_time_ms": 9.19,
+          "total_time_ms": 423.41,
+          "sam_confidence_score": 1.019700050354004
+        }
+      }
+    },
+    {
+      "sample_id": "sample_oil_03_coastal_slick",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/coast",
+      "is_oil": true,
+      "embedding_time_ms": 416.64,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.9934,
+          "dice": 0.9967,
+          "precision": 1.0,
+          "recall": 0.9934,
+          "predicted_pixels": 38593,
+          "ground_truth_pixels": 38850,
+          "decode_time_ms": 64.07,
+          "total_time_ms": 480.71,
+          "sam_confidence_score": 1.0056999921798706
+        },
+        "point_prompt_center": {
+          "iou": 0.9964,
+          "dice": 0.9982,
+          "precision": 1.0,
+          "recall": 0.9964,
+          "predicted_pixels": 38712,
+          "ground_truth_pixels": 38850,
+          "decode_time_ms": 8.63,
+          "total_time_ms": 425.27,
+          "sam_confidence_score": 0.9965999722480774
+        },
+        "multi_point_prompts": {
+          "iou": 0.9894,
+          "dice": 0.9947,
+          "precision": 1.0,
+          "recall": 0.9894,
+          "predicted_pixels": 38439,
+          "ground_truth_pixels": 38850,
+          "decode_time_ms": 9.02,
+          "total_time_ms": 425.66,
+          "sam_confidence_score": 1.0139000415802002
+        }
+      }
+    },
+    {
+      "sample_id": "sample_oil_04_weathered_ribbon",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "is_oil": true,
+      "embedding_time_ms": 409.79,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.9667,
+          "dice": 0.9831,
+          "precision": 0.9694,
+          "recall": 0.9972,
+          "predicted_pixels": 11781,
+          "ground_truth_pixels": 11452,
+          "decode_time_ms": 64.94,
+          "total_time_ms": 474.73,
+          "sam_confidence_score": 0.9937000274658203
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 244605,
+          "ground_truth_pixels": 11452,
+          "decode_time_ms": 11.8,
+          "total_time_ms": 421.59,
+          "sam_confidence_score": 0.9598000049591064
+        },
+        "multi_point_prompts": {
+          "iou": 0.9739,
+          "dice": 0.9868,
+          "precision": 0.9767,
+          "recall": 0.997,
+          "predicted_pixels": 11690,
+          "ground_truth_pixels": 11452,
+          "decode_time_ms": 9.82,
+          "total_time_ms": 419.61,
+          "sam_confidence_score": 0.9980000257492065
+        }
+      }
+    },
+    {
+      "sample_id": "sample_oil_05_multi_fragment",
+      "class_label": "PETROLEUM_OIL",
+      "subcategory": "oil/water",
+      "is_oil": true,
+      "embedding_time_ms": 413.19,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.9911,
+          "dice": 0.9955,
+          "precision": 0.999,
+          "recall": 0.9921,
+          "predicted_pixels": 12552,
+          "ground_truth_pixels": 12639,
+          "decode_time_ms": 64.23,
+          "total_time_ms": 477.42,
+          "sam_confidence_score": 1.0041999816894531
+        },
+        "point_prompt_center": {
+          "iou": 0.4993,
+          "dice": 0.6661,
+          "precision": 0.9991,
+          "recall": 0.4996,
+          "predicted_pixels": 6320,
+          "ground_truth_pixels": 12639,
+          "decode_time_ms": 8.71,
+          "total_time_ms": 421.9,
+          "sam_confidence_score": 0.9930999875068665
+        },
+        "multi_point_prompts": {
+          "iou": 0.8006,
+          "dice": 0.8893,
+          "precision": 0.9991,
+          "recall": 0.8012,
+          "predicted_pixels": 10135,
+          "ground_truth_pixels": 12639,
+          "decode_time_ms": 9.77,
+          "total_time_ms": 422.96,
+          "sam_confidence_score": 1.0121999979019165
+        }
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_01_low_wind_c0",
+      "class_label": "LOW_WIND_AREA",
+      "subcategory": "no_oil/water/c0",
+      "is_oil": false,
+      "embedding_time_ms": 418.29,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 150832,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 64.54,
+          "total_time_ms": 482.83,
+          "sam_confidence_score": 0.8989999890327454
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 262106,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 9.05,
+          "total_time_ms": 427.34,
+          "sam_confidence_score": 1.020400047302246
+        },
+        "multi_point_prompts": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 260663,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 8.9,
+          "total_time_ms": 427.18,
+          "sam_confidence_score": 1.0269999504089355
+        }
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_02_biogenic_c1",
+      "class_label": "BIOGENIC_SLICK",
+      "subcategory": "no_oil/water/c1",
+      "is_oil": false,
+      "embedding_time_ms": 410.79,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 21222,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 62.92,
+          "total_time_ms": 473.71,
+          "sam_confidence_score": 0.6819000244140625
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 253294,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 9.08,
+          "total_time_ms": 419.87,
+          "sam_confidence_score": 1.0013999938964844
+        },
+        "multi_point_prompts": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 238006,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 8.9,
+          "total_time_ms": 419.69,
+          "sam_confidence_score": 1.0018999576568604
+        }
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_03_internal_wave_c2",
+      "class_label": "INTERNAL_WAVE",
+      "subcategory": "no_oil/water/c2",
+      "is_oil": false,
+      "embedding_time_ms": 414.05,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 72131,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 63.41,
+          "total_time_ms": 477.46,
+          "sam_confidence_score": 0.8307999968528748
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 261719,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 9.74,
+          "total_time_ms": 423.79,
+          "sam_confidence_score": 0.9833999872207642
+        },
+        "multi_point_prompts": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 257198,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 8.98,
+          "total_time_ms": 423.03,
+          "sam_confidence_score": 0.9998000264167786
+        }
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_04_ship_wake_c4",
+      "class_label": "SHIP_WAKE",
+      "subcategory": "no_oil/water/c4",
+      "is_oil": false,
+      "embedding_time_ms": 419.73,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 13089,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 63.68,
+          "total_time_ms": 483.42,
+          "sam_confidence_score": 0.9179999828338623
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 3333,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 8.91,
+          "total_time_ms": 428.65,
+          "sam_confidence_score": 0.9546999931335449
+        },
+        "multi_point_prompts": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 3386,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 8.81,
+          "total_time_ms": 428.55,
+          "sam_confidence_score": 0.9787999987602234
+        }
+      }
+    },
+    {
+      "sample_id": "sample_lookalike_05_clean_sea",
+      "class_label": "CLEAN_WATER",
+      "subcategory": "no_oil/water/clean",
+      "is_oil": false,
+      "embedding_time_ms": 410.3,
+      "prompts_evaluated": {
+        "box_prompt": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 119858,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 61.35,
+          "total_time_ms": 471.65,
+          "sam_confidence_score": 0.8618999719619751
+        },
+        "point_prompt_center": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 262090,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 9.11,
+          "total_time_ms": 419.41,
+          "sam_confidence_score": 1.0185999870300293
+        },
+        "multi_point_prompts": {
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "predicted_pixels": 260716,
+          "ground_truth_pixels": 0,
+          "decode_time_ms": 9.49,
+          "total_time_ms": 419.8,
+          "sam_confidence_score": 1.0225000381469727
+        }
+      }
+    }
+  ]
+}

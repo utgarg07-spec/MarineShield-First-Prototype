@@ -1,0 +1,43 @@
+{
+  "scenario_id": "SCENARIO-07-INVALID-MISSING-DATA",
+  "description": "SAR scene tile falls near swath edge with severe thermal noise and missing meteorological wind vectors, safely triggering a LOW_DATA_QUALITY abstention.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c007",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-007",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c007",
+    "spill_geometry_id": "spill-geom-007",
+    "hypothesis_state": "ABSTAINED",
+    "discharge_modality": "UNCERTAIN_ORIGIN",
+    "data_quality": {
+      "index": 0.22,
+      "quality_flags": [
+        "NEAR_SCENE_EDGE",
+        "THERMAL_NOISE_ANOMALY",
+        "MISSING_WIND_DATA"
+      ]
+    }
+  },
+  "abstention": {
+    "abstention_id": "abst-8f3b21c4-007",
+    "artifact_type": "RELEASE_HYPOTHESIS",
+    "abstention_state": "ABSTAINED",
+    "abstention_reason_primary": "LOW_DATA_QUALITY",
+    "abstention_reasons_all": [
+      "LOW_DATA_QUALITY",
+      "MISSING_ENVIRONMENTAL_CONTEXT"
+    ],
+    "triggering_values": {
+      "data_quality_index": 0.22,
+      "configured_min_dqi": 0.35
+    },
+    "recommendation": "ANALYST_REVIEW_REQUIRED"
+  },
+  "candidate_hypotheses": [],
+  "expected_outcome": {
+    "is_abstention_triggered": true,
+    "abstention_state": "ABSTAINED",
+    "abstention_reason": "LOW_DATA_QUALITY",
+    "can_proceed_to_attribution": false,
+    "recommendation": "ANALYST_REVIEW_REQUIRED"
+  }
+}

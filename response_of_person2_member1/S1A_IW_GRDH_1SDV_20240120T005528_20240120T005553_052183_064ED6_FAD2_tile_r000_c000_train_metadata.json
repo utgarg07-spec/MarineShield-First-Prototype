@@ -1,0 +1,42 @@
+{
+  "tile_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2_tile_r000_c000_train",
+  "source_granule_id": "S1A_IW_GRDH_1SDV_20240120T005528_20240120T005553_052183_064ED6_FAD2",
+  "tile_row": 0,
+  "tile_col": 0,
+  "pixel_bounds_yx": [
+    0,
+    512,
+    0,
+    512
+  ],
+  "geo_bbox_wgs84": [
+    73.046,
+    18.12765,
+    74.38305,
+    19.0991
+  ],
+  "spatial_resolution_m": [
+    10.0,
+    10.0
+  ],
+  "tile_dimensions_px": [
+    512,
+    512
+  ],
+  "crs": "EPSG:4326",
+  "channels": [
+    "VV",
+    "VH"
+  ],
+  "normalization": {
+    "method": "linear_clip_db",
+    "min_db": -30.0,
+    "max_db": 0.0,
+    "clip_min": 0.0,
+    "clip_max": 1.0,
+    "formula": "clip((sigma0 - min_db)/(max_db - min_db), clip_min, clip_max)"
+  },
+  "split": "train",
+  "sha256_hash": "0117ac56eaa03cf3bb2283d02cef42ad535b45967d606f7bc2a1e27caf1e71dc",
+  "pipeline_version": "1.0.0"
+}

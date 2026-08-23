@@ -1,0 +1,591 @@
+{
+  "incident_id": "inc-cf-test-01",
+  "status": "SUCCESS",
+  "reason": "COUNTERFACTUAL_EVALUATION_COMPLETED",
+  "replay_timestamp_utc": null,
+  "original_candidate_count": 2,
+  "counterfactual_candidate_count": 1,
+  "removed_candidate_id": "413111111",
+  "removed_candidate_label": "H_1",
+  "original_top_hypothesis_label": "H_1",
+  "original_top_hypothesis_score": 74.69,
+  "original_attribution_status": "ATTRIBUTED_CANDIDATES_EVALUATED",
+  "counterfactual_attribution_status": "SOURCE_UNKNOWN",
+  "is_top_hypothesis_dominant": true,
+  "is_result_weak_or_tied": false,
+  "rank_changes": [
+    {
+      "hypothesis_label": "H_1",
+      "candidate_id": "413222222",
+      "original_rank": 1,
+      "original_score": 74.69,
+      "counterfactual_rank": 1,
+      "counterfactual_score": 25.8,
+      "rank_change": 0,
+      "score_change": -48.89
+    }
+  ],
+  "evidence_provenance": {
+    "engine_version": "source-investigation-engine-v1.0.0",
+    "weights_version": "m4-weights-v1.0-canonical",
+    "reconstruction_engine": "PYGNOME_BACKWARD_DRIFT_INTEGRATION",
+    "execution_timestamp_utc": "2026-08-21T19:53:09Z"
+  },
+  "data_mode": "MOCK_HYBRID",
+  "non_guilt_clause": "Counterfactual attribution is a deterministic sensitivity analysis of the source-ranking engine. It does not establish legal causality, responsibility, or illegal behavior.",
+  "original_result": {
+    "incident_id": "inc-cf-test-01",
+    "scenario_id": "SCENARIO-LIVE",
+    "status": "ATTRIBUTED_CANDIDATES_EVALUATED",
+    "is_unknown_triggered": false,
+    "unknown_trigger_reason": null,
+    "release_hypothesis": {
+      "release_hypothesis_id": "ca9e64cb-d7bc-478f-bb09-3339720614cb",
+      "incident_id": "inc-cf-test-01",
+      "spill_geometry_id": "5f97e32d-bfd3-4ca4-8dd2-e9628406a939",
+      "hypothesis_state": "EVALUATED",
+      "discharge_modality": "SINGLE_DISCHARGE",
+      "temporal_scope": {
+        "t_observation_utc": "2024-01-20T00:55:41Z",
+        "t_earliest_utc": "2024-01-19T18:55:41Z",
+        "t_most_likely_utc": "2024-01-19T21:19:41Z",
+        "t_latest_utc": "2024-01-20T00:01:41Z",
+        "window_duration_hours": 6.0
+      },
+      "spatial_scope": {
+        "release_polygon_geojson": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  73.269358,
+                  18.479799
+                ],
+                [
+                  73.259798,
+                  18.525374
+                ],
+                [
+                  73.232573,
+                  18.564011
+                ],
+                [
+                  73.191829,
+                  18.589828
+                ],
+                [
+                  73.143768,
+                  18.598893
+                ],
+                [
+                  73.095707,
+                  18.589828
+                ],
+                [
+                  73.054963,
+                  18.564011
+                ],
+                [
+                  73.027738,
+                  18.525374
+                ],
+                [
+                  73.018178,
+                  18.479799
+                ],
+                [
+                  73.027738,
+                  18.434224
+                ],
+                [
+                  73.054963,
+                  18.395587
+                ],
+                [
+                  73.095707,
+                  18.36977
+                ],
+                [
+                  73.143768,
+                  18.360705
+                ],
+                [
+                  73.191829,
+                  18.36977
+                ],
+                [
+                  73.232573,
+                  18.395587
+                ],
+                [
+                  73.259798,
+                  18.434224
+                ],
+                [
+                  73.269358,
+                  18.479799
+                ]
+              ]
+            ]
+          },
+          "properties": {
+            "uncertainty_area_km2": 552.17,
+            "centroid_lon": 73.143768,
+            "centroid_lat": 18.479799,
+            "dispersion_radius_km": 13.26,
+            "backward_drift_speed_knots": 0.67
+          }
+        },
+        "crs": "EPSG:4326"
+      },
+      "reconstruction_method": {
+        "engine": "PYGNOME_BACKWARD_DRIFT_INTEGRATION",
+        "engine_version": "pygnome-1.1.8-m4-adapter-v1.0",
+        "backward_simulation_hours": 6.0,
+        "forcing_datasets": {
+          "wind_dataset_id": "ERA5-WIND-20240120",
+          "current_dataset_id": "HYCOM-CURR-20240120"
+        }
+      },
+      "created_at_utc": "2026-08-21T19:53:09Z"
+    },
+    "top_hypothesis_id": "src-hyp-inc-cf-t-01",
+    "top_hypothesis_category": "VESSEL_IDENTIFIED",
+    "top_evidence_score": 74.69,
+    "top_evidence_strength": "MODERATE_COMPATIBILITY",
+    "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS",
+    "score_margin_over_second": 48.89,
+    "candidate_hypotheses": [
+      {
+        "source_hypothesis_id": "src-hyp-inc-cf-t-01",
+        "incident_id": "inc-cf-test-01",
+        "release_hypothesis_id": "ca9e64cb-d7bc-478f-bb09-3339720614cb",
+        "hypothesis_label": "H_1",
+        "source_category": "VESSEL_IDENTIFIED",
+        "candidate_entity": {
+          "vessel_mmsi": "413111111",
+          "vessel_name": "MV Dominant Tanker",
+          "vessel_type": "TANKER",
+          "vessel_flag": "PA"
+        },
+        "evidence_evaluation": {
+          "evidence_score": 74.69,
+          "evidence_strength": "MODERATE_COMPATIBILITY",
+          "ranking_position": 1,
+          "counterfactual_analysis": {
+            "delta_score_without_this_candidate": 48.89,
+            "ranking_stability": "ROBUST_DOMINANT_HYPOTHESIS"
+          }
+        },
+        "component_scores": {
+          "spatial": 89.38,
+          "temporal": 35.0,
+          "trajectory": 85.0,
+          "drift": 59.08,
+          "vessel": 85.0,
+          "behavior": 95.0,
+          "contradiction": 0.0
+        },
+        "component_breakdown": {
+          "spatial_score": {
+            "raw_score": 89.38,
+            "weight": 0.2,
+            "weighted_contribution": 17.876
+          },
+          "temporal_score": {
+            "raw_score": 35.0,
+            "weight": 0.15,
+            "weighted_contribution": 5.25
+          },
+          "trajectory_score": {
+            "raw_score": 85.0,
+            "weight": 0.15,
+            "weighted_contribution": 12.75
+          },
+          "drift_score": {
+            "raw_score": 59.08,
+            "weight": 0.2,
+            "weighted_contribution": 11.816
+          },
+          "vessel_score": {
+            "raw_score": 85.0,
+            "weight": 0.15,
+            "weighted_contribution": 12.75
+          },
+          "behavior_score": {
+            "raw_score": 95.0,
+            "weight": 0.15,
+            "weighted_contribution": 14.25
+          },
+          "contradiction_penalty": {
+            "raw_penalty": 0.0,
+            "weight": 0.2,
+            "weighted_deduction": 0.0
+          }
+        },
+        "supporting_evidence": [
+          {
+            "evidence_type": "SPATIAL_PROXIMITY",
+            "polarity": "SUPPORTING",
+            "summary_text": "Vessel track passes within 7.0 km of release centroid (within 13.3 km dispersion zone)"
+          },
+          {
+            "evidence_type": "TRAJECTORY_INTERSECTION",
+            "polarity": "SUPPORTING",
+            "summary_text": "Vessel navigation vector intersects the reconstructed discharge corridor"
+          },
+          {
+            "evidence_type": "VESSEL_CHARACTERISTICS",
+            "polarity": "SUPPORTING",
+            "summary_text": "Vessel type (Oil Tanker) carries significant cargo/slop tank capacity"
+          },
+          {
+            "evidence_type": "BEHAVIOR_ANOMALY",
+            "polarity": "SUPPORTING",
+            "summary_text": "AIS broadcast transmission gap observed during transit across release corridor"
+          },
+          {
+            "evidence_type": "BEHAVIOR_ANOMALY",
+            "polarity": "SUPPORTING",
+            "summary_text": "Significant speed reduction (4.5 knots) recorded near release zone"
+          }
+        ],
+        "contradictory_evidence": [
+          {
+            "evidence_type": "TEMPORAL_INTERSECTION",
+            "polarity": "CONTRADICTORY",
+            "summary_text": "Vessel transit timestamp is offset from estimated release window"
+          }
+        ],
+        "behavioral_anomaly_detected": true,
+        "unmatched_sar_target": false
+      },
+      {
+        "source_hypothesis_id": "src-hyp-inc-cf-t-02",
+        "incident_id": "inc-cf-test-01",
+        "release_hypothesis_id": "ca9e64cb-d7bc-478f-bb09-3339720614cb",
+        "hypothesis_label": "H_2",
+        "source_category": "VESSEL_IDENTIFIED",
+        "candidate_entity": {
+          "vessel_mmsi": "413222222",
+          "vessel_name": "MV Distant Cargo",
+          "vessel_type": "CARGO",
+          "vessel_flag": "PA"
+        },
+        "evidence_evaluation": {
+          "evidence_score": 25.8,
+          "evidence_strength": "INSUFFICIENT_EVIDENCE",
+          "ranking_position": 2,
+          "counterfactual_analysis": {
+            "delta_score_without_this_candidate": 0.0,
+            "ranking_stability": "MARGINAL"
+          }
+        },
+        "component_scores": {
+          "spatial": 5.0,
+          "temporal": 35.0,
+          "trajectory": 10.0,
+          "drift": 19.0,
+          "vessel": 75.0,
+          "behavior": 20.0,
+          "contradiction": 0.0
+        },
+        "component_breakdown": {
+          "spatial_score": {
+            "raw_score": 5.0,
+            "weight": 0.2,
+            "weighted_contribution": 1.0
+          },
+          "temporal_score": {
+            "raw_score": 35.0,
+            "weight": 0.15,
+            "weighted_contribution": 5.25
+          },
+          "trajectory_score": {
+            "raw_score": 10.0,
+            "weight": 0.15,
+            "weighted_contribution": 1.5
+          },
+          "drift_score": {
+            "raw_score": 19.0,
+            "weight": 0.2,
+            "weighted_contribution": 3.8
+          },
+          "vessel_score": {
+            "raw_score": 75.0,
+            "weight": 0.15,
+            "weighted_contribution": 11.25
+          },
+          "behavior_score": {
+            "raw_score": 20.0,
+            "weight": 0.15,
+            "weighted_contribution": 3.0
+          },
+          "contradiction_penalty": {
+            "raw_penalty": 0.0,
+            "weight": 0.2,
+            "weighted_deduction": 0.0
+          }
+        },
+        "supporting_evidence": [
+          {
+            "evidence_type": "VESSEL_CHARACTERISTICS",
+            "polarity": "SUPPORTING",
+            "summary_text": "Vessel type (Commercial Cargo/Bulk) possesses heavy fuel and bilge storage capacity"
+          }
+        ],
+        "contradictory_evidence": [
+          {
+            "evidence_type": "SPATIAL_PROXIMITY",
+            "polarity": "CONTRADICTORY",
+            "summary_text": "Vessel track maintained excessive separation (83.4 km) from release envelope"
+          },
+          {
+            "evidence_type": "TEMPORAL_INTERSECTION",
+            "polarity": "CONTRADICTORY",
+            "summary_text": "Vessel transit timestamp is offset from estimated release window"
+          }
+        ],
+        "behavioral_anomaly_detected": false,
+        "unmatched_sar_target": false
+      }
+    ],
+    "data_quality_index": 0.9,
+    "provenance": {
+      "engine_version": "source-investigation-engine-v1.0.0",
+      "weights_version": "m4-weights-v1.0-canonical",
+      "reconstruction_engine": "PYGNOME_BACKWARD_DRIFT_INTEGRATION",
+      "execution_timestamp_utc": "2026-08-21T19:53:09Z"
+    },
+    "non_guilt_clause": "This hypothesis evaluation reflects spatio-temporal compatibility with observed data and does not constitute legal proof of responsibility or regulatory violation.",
+    "created_at_utc": "2026-08-21T19:53:09Z"
+  },
+  "counterfactual_result": {
+    "incident_id": "inc-cf-test-01",
+    "scenario_id": "SCENARIO-LIVE",
+    "status": "SOURCE_UNKNOWN",
+    "is_unknown_triggered": true,
+    "unknown_trigger_reason": "ALL_CANDIDATES_BELOW_THRESHOLD",
+    "release_hypothesis": {
+      "release_hypothesis_id": "dd4cbd65-87ae-4b07-a206-2c800f405b0e",
+      "incident_id": "inc-cf-test-01",
+      "spill_geometry_id": "0a308b51-fea2-47ef-a20e-92dbe3df8e13",
+      "hypothesis_state": "EVALUATED",
+      "discharge_modality": "SINGLE_DISCHARGE",
+      "temporal_scope": {
+        "t_observation_utc": "2024-01-20T00:55:41Z",
+        "t_earliest_utc": "2024-01-19T18:55:41Z",
+        "t_most_likely_utc": "2024-01-19T21:19:41Z",
+        "t_latest_utc": "2024-01-20T00:01:41Z",
+        "window_duration_hours": 6.0
+      },
+      "spatial_scope": {
+        "release_polygon_geojson": {
+          "type": "Feature",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  73.269358,
+                  18.479799
+                ],
+                [
+                  73.259798,
+                  18.525374
+                ],
+                [
+                  73.232573,
+                  18.564011
+                ],
+                [
+                  73.191829,
+                  18.589828
+                ],
+                [
+                  73.143768,
+                  18.598893
+                ],
+                [
+                  73.095707,
+                  18.589828
+                ],
+                [
+                  73.054963,
+                  18.564011
+                ],
+                [
+                  73.027738,
+                  18.525374
+                ],
+                [
+                  73.018178,
+                  18.479799
+                ],
+                [
+                  73.027738,
+                  18.434224
+                ],
+                [
+                  73.054963,
+                  18.395587
+                ],
+                [
+                  73.095707,
+                  18.36977
+                ],
+                [
+                  73.143768,
+                  18.360705
+                ],
+                [
+                  73.191829,
+                  18.36977
+                ],
+                [
+                  73.232573,
+                  18.395587
+                ],
+                [
+                  73.259798,
+                  18.434224
+                ],
+                [
+                  73.269358,
+                  18.479799
+                ]
+              ]
+            ]
+          },
+          "properties": {
+            "uncertainty_area_km2": 552.17,
+            "centroid_lon": 73.143768,
+            "centroid_lat": 18.479799,
+            "dispersion_radius_km": 13.26,
+            "backward_drift_speed_knots": 0.67
+          }
+        },
+        "crs": "EPSG:4326"
+      },
+      "reconstruction_method": {
+        "engine": "PYGNOME_BACKWARD_DRIFT_INTEGRATION",
+        "engine_version": "pygnome-1.1.8-m4-adapter-v1.0",
+        "backward_simulation_hours": 6.0,
+        "forcing_datasets": {
+          "wind_dataset_id": "ERA5-WIND-20240120",
+          "current_dataset_id": "HYCOM-CURR-20240120"
+        }
+      },
+      "created_at_utc": "2026-08-21T19:53:09Z"
+    },
+    "top_hypothesis_id": "src-unknown",
+    "top_hypothesis_category": "UNKNOWN_SOURCE",
+    "top_evidence_score": 25.8,
+    "top_evidence_strength": "INSUFFICIENT_EVIDENCE",
+    "ranking_stability": "FRAGILE_RANKING",
+    "score_margin_over_second": 25.8,
+    "candidate_hypotheses": [
+      {
+        "source_hypothesis_id": "src-hyp-inc-cf-t-01",
+        "incident_id": "inc-cf-test-01",
+        "release_hypothesis_id": "dd4cbd65-87ae-4b07-a206-2c800f405b0e",
+        "hypothesis_label": "H_1",
+        "source_category": "VESSEL_IDENTIFIED",
+        "candidate_entity": {
+          "vessel_mmsi": "413222222",
+          "vessel_name": "MV Distant Cargo",
+          "vessel_type": "CARGO",
+          "vessel_flag": "PA"
+        },
+        "evidence_evaluation": {
+          "evidence_score": 25.8,
+          "evidence_strength": "INSUFFICIENT_EVIDENCE",
+          "ranking_position": 1,
+          "counterfactual_analysis": {
+            "delta_score_without_this_candidate": 25.8,
+            "ranking_stability": "FRAGILE_RANKING"
+          }
+        },
+        "component_scores": {
+          "spatial": 5.0,
+          "temporal": 35.0,
+          "trajectory": 10.0,
+          "drift": 19.0,
+          "vessel": 75.0,
+          "behavior": 20.0,
+          "contradiction": 0.0
+        },
+        "component_breakdown": {
+          "spatial_score": {
+            "raw_score": 5.0,
+            "weight": 0.2,
+            "weighted_contribution": 1.0
+          },
+          "temporal_score": {
+            "raw_score": 35.0,
+            "weight": 0.15,
+            "weighted_contribution": 5.25
+          },
+          "trajectory_score": {
+            "raw_score": 10.0,
+            "weight": 0.15,
+            "weighted_contribution": 1.5
+          },
+          "drift_score": {
+            "raw_score": 19.0,
+            "weight": 0.2,
+            "weighted_contribution": 3.8
+          },
+          "vessel_score": {
+            "raw_score": 75.0,
+            "weight": 0.15,
+            "weighted_contribution": 11.25
+          },
+          "behavior_score": {
+            "raw_score": 20.0,
+            "weight": 0.15,
+            "weighted_contribution": 3.0
+          },
+          "contradiction_penalty": {
+            "raw_penalty": 0.0,
+            "weight": 0.2,
+            "weighted_deduction": 0.0
+          }
+        },
+        "supporting_evidence": [
+          {
+            "evidence_type": "VESSEL_CHARACTERISTICS",
+            "polarity": "SUPPORTING",
+            "summary_text": "Vessel type (Commercial Cargo/Bulk) possesses heavy fuel and bilge storage capacity"
+          }
+        ],
+        "contradictory_evidence": [
+          {
+            "evidence_type": "SPATIAL_PROXIMITY",
+            "polarity": "CONTRADICTORY",
+            "summary_text": "Vessel track maintained excessive separation (83.4 km) from release envelope"
+          },
+          {
+            "evidence_type": "TEMPORAL_INTERSECTION",
+            "polarity": "CONTRADICTORY",
+            "summary_text": "Vessel transit timestamp is offset from estimated release window"
+          }
+        ],
+        "behavioral_anomaly_detected": false,
+        "unmatched_sar_target": false
+      }
+    ],
+    "data_quality_index": 0.9,
+    "provenance": {
+      "engine_version": "source-investigation-engine-v1.0.0",
+      "weights_version": "m4-weights-v1.0-canonical",
+      "reconstruction_engine": "PYGNOME_BACKWARD_DRIFT_INTEGRATION",
+      "execution_timestamp_utc": "2026-08-21T19:53:09Z"
+    },
+    "non_guilt_clause": "This hypothesis evaluation reflects spatio-temporal compatibility with observed data and does not constitute legal proof of responsibility or regulatory violation.",
+    "created_at_utc": "2026-08-21T19:53:09Z"
+  },
+  "created_at_utc": "2026-08-21T19:53:09Z"
+}

@@ -1,0 +1,104 @@
+{
+  "scenario_id": "SCENARIO-08-UNKNOWN-SOURCE-OUTCOME",
+  "description": "Satellite detection confirms active crude slick, but regional AIS station maintenance caused an 88% coverage blackout. All evaluated hypotheses fail threshold, cleanly triggering an UNKNOWN status with an actionable escalation workflow.",
+  "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c008",
+  "release_hypothesis": {
+    "release_hypothesis_id": "rel-8f3b21c4-008",
+    "incident_id": "8f3b21c4-91a5-4e89-b762-d21f8a49c008",
+    "spill_geometry_id": "spill-geom-008",
+    "hypothesis_state": "UNRESOLVED",
+    "discharge_modality": "UNCERTAIN_ORIGIN",
+    "temporal_scope": {
+      "t_observation_utc": "2026-08-20T03:00:00Z",
+      "t_earliest_utc": "2026-08-19T21:00:00Z",
+      "t_most_likely_utc": "2026-08-20T00:00:00Z",
+      "t_latest_utc": "2026-08-20T02:30:00Z",
+      "window_duration_hours": 5.5
+    },
+    "spatial_scope": {
+      "release_polygon_geojson": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [87.20, 19.50],
+              [87.40, 19.50],
+              [87.40, 19.70],
+              [87.20, 19.70],
+              [87.20, 19.50]
+            ]
+          ]
+        },
+        "properties": {
+          "uncertainty_area_km2": 41.5,
+          "centroid_lon": 87.30,
+          "centroid_lat": 19.60
+        }
+      },
+      "crs": "EPSG:4326"
+    }
+  },
+  "candidate_hypotheses": [
+    {
+      "source_hypothesis_id": "src-hyp-08-vessel-marginal",
+      "hypothesis_label": "H_1",
+      "source_category": "VESSEL_IDENTIFIED",
+      "candidate_entity": {
+        "vessel_mmsi": "419098765",
+        "vessel_name": "BENGAL TRADER",
+        "vessel_type": "GENERAL_CARGO"
+      },
+      "component_scores": {
+        "spatial": 20.0,
+        "temporal": 25.0,
+        "trajectory": 15.0,
+        "drift": 10.0,
+        "vessel": 25.0,
+        "behavior": 15.0,
+        "contradiction": 0.0
+      },
+      "evidence_score": 18.25,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 1
+    },
+    {
+      "source_hypothesis_id": "src-hyp-08-unknown",
+      "hypothesis_label": "H_unknown",
+      "source_category": "UNKNOWN_SOURCE",
+      "candidate_entity": {
+        "description": "Source cannot be reliably resolved due to severe sensor/AIS coverage deficit"
+      },
+      "evidence_score": 0.0,
+      "evidence_strength": "INSUFFICIENT_EVIDENCE",
+      "ranking_position": 2
+    }
+  ],
+  "unknown_state": {
+    "unknown_state_id": "unk-8f3b21c4-008",
+    "status": "SOURCE_UNKNOWN",
+    "trigger_condition": "AIS_DATA_BLACKOUT",
+    "diagnostic_summary": {
+      "total_candidates_evaluated": 1,
+      "highest_candidate_score": 18.25,
+      "ais_coverage_percentage": 12.0,
+      "sar_dark_vessels_detected_count": 0
+    },
+    "recommended_investigation_actions": [
+      "EXPAND_AIS_TEMPORAL_SEARCH_WINDOW",
+      "QUERY_COASTAL_RADAR_AND_VTS_ARCHIVES",
+      "SEARCH_HISTORICAL_SAR_SCENES_FOR_EARLIER_PASSES",
+      "FLAG_FOR_NEXT_BEST_OBSERVATION_SATELLITE_PASS"
+    ]
+  },
+  "expected_outcome": {
+    "top_hypothesis_id": "src-hyp-08-unknown",
+    "top_hypothesis_category": "UNKNOWN_SOURCE",
+    "top_evidence_score": 18.25,
+    "top_evidence_strength": "INSUFFICIENT_EVIDENCE",
+    "ranking_stability": "FRAGILE_RANKING",
+    "is_unknown_triggered": true,
+    "unknown_trigger_reason": "AIS_DATA_BLACKOUT",
+    "recommended_actions_count": 4
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "experiment_id": "EXP-02-SAR-SAM-ADAPTATION",
+  "epochs": 15,
+  "train_time_sec": 223.3,
+  "best_val_loss": 0.4154,
+  "parameter_summary": {
+    "total_parameters": 93769585,
+    "trainable_parameters": 4092453,
+    "frozen_parameters": 89677132,
+    "trainable_percentage": 4.36
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3132,
+      "val_loss": 1.2588,
+      "val_oil_mean_iou": 0.0378,
+      "val_lookalike_mean_fp_pixels": 4262.4,
+      "lr": 9.9e-05
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.1236,
+      "val_loss": 1.1315,
+      "val_oil_mean_iou": 0.0165,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 9.6e-05
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9491,
+      "val_loss": 0.923,
+      "val_oil_mean_iou": 0.001,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 9.1e-05
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5786,
+      "val_loss": 0.6998,
+      "val_oil_mean_iou": 0.0312,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 8.4e-05
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5138,
+      "val_loss": 0.6714,
+      "val_oil_mean_iou": 0.1302,
+      "val_lookalike_mean_fp_pixels": 0.4,
+      "lr": 7.5e-05
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4736,
+      "val_loss": 0.5466,
+      "val_oil_mean_iou": 0.1291,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 6.6e-05
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.4538,
+      "val_loss": 0.5654,
+      "val_oil_mean_iou": 0.091,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 5.6e-05
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.415,
+      "val_loss": 0.4918,
+      "val_oil_mean_iou": 0.2021,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 4.5e-05
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3692,
+      "val_loss": 0.5561,
+      "val_oil_mean_iou": 0.1197,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 3.5e-05
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3995,
+      "val_loss": 0.4625,
+      "val_oil_mean_iou": 0.2445,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 2.6e-05
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.303,
+      "val_loss": 0.4415,
+      "val_oil_mean_iou": 0.2413,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 1.7e-05
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.2825,
+      "val_loss": 0.4233,
+      "val_oil_mean_iou": 0.2863,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 1e-05
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.2735,
+      "val_loss": 0.4217,
+      "val_oil_mean_iou": 0.2937,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 5e-06
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.2674,
+      "val_loss": 0.4282,
+      "val_oil_mean_iou": 0.2807,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 2e-06
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.2644,
+      "val_loss": 0.4154,
+      "val_oil_mean_iou": 0.3041,
+      "val_lookalike_mean_fp_pixels": 0.0,
+      "lr": 1e-06
+    }
+  ]
+}

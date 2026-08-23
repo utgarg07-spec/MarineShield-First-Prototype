@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "registry_version": "1.0.0",
+  "last_updated_utc": "2026-08-20T17:58:00Z",
+  "governing_contract": "docs/ml/OIL_INTELLIGENCE_CONTRACTS.md#section-4-dataset-version-contract",
+  "datasets": [
+    {
+      "dataset_version_id": "DARTIS-2019-v1.0",
+      "dataset_name": "DARTIS 2019 (Dataset of Oil Slicks, Look-Alikes and Remarkable SAR Signatures)",
+      "split": "FULL_ARCHIVE",
+      "source_references": [
+        {
+          "source_name": "PANGAEA Data Publisher for Earth & Environmental Science",
+          "source_url": "https://doi.org/10.1594/PANGAEA.980773",
+          "license": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
+          "citation": "Yang, Y.-J., Singha, S., Goldman, R., and Schütte, F.: Dataset of Oil Slicks, Look-Alikes and Remarkable SAR Signatures Obtained from Sentinel-1 Data in the Eastern Mediterranean Sea, Earth Syst. Sci. Data, 17, 6807–6824, https://doi.org/10.5194/essd-17-6807-2025, 2025."
+        }
+      ],
+      "acquisition_date_range": {
+        "start_utc": "2019-01-01T00:00:00Z",
+        "end_utc": "2019-12-31T23:59:59Z"
+      },
+      "scene_count": 212,
+      "tile_count": 3655,
+      "oil_tile_count": 1365,
+      "lookalike_tile_count": 2290,
+      "negative_tile_count": 0,
+      "class_distribution": {
+        "PETROLEUM_OIL": 1365,
+        "BIOGENIC_SLICK": 412,
+        "LOW_WIND_AREA": 845,
+        "SHIP_WAKE": 215,
+        "NATURAL_FILM": 388,
+        "COASTAL_ATMOSPHERIC_CLUTTER": 430
+      },
+      "patch_properties": {
+        "dimensions_px": [512, 512],
+        "pixel_spacing_m": 10.0,
+        "spatial_footprint_km": [5.12, 5.12],
+        "bit_depth": "float32 (normalized sigma0 dB)"
+      },
+      "geographic_coverage": {
+        "regions": ["Eastern Mediterranean Sea", "Levantine Basin", "Aegean Sea", "Ionian Sea"],
+        "bbox_geojson": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [20.0, 30.0],
+              [36.5, 30.0],
+              [36.5, 37.5],
+              [20.0, 37.5],
+              [20.0, 30.0]
+            ]
+          ]
+        }
+      },
+      "sensor_modes": ["Sentinel-1 IW GRD (VV primary, dual-pol VV+VH where available)"],
+      "preprocessing_pipeline_version": "sar-prep-dartis-v1.0.0",
+      "checksum_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_uri": "data/raw/DARTIS_2019/",
+      "created_at_utc": "2026-08-20T17:58:00Z",
+      "created_by": "Person 1 / Member 2"
+    },
+    {
+      "dataset_version_id": "DARTIS-2019-train",
+      "dataset_name": "DARTIS 2019 Training Partition",
+      "split": "TRAIN",
+      "parent_dataset_version_id": "DARTIS-2019-v1.0",
+      "acquisition_date_range": {
+        "start_utc": "2019-01-01T00:00:00Z",
+        "end_utc": "2019-08-31T23:59:59Z"
+      },
+      "scene_count": 148,
+      "tile_count": 2558,
+      "oil_tile_count": 955,
+      "lookalike_tile_count": 1603,
+      "negative_tile_count": 0,
+      "split_fraction": 0.70,
+      "disjointness_guarantee": "Scene-level temporal and spatial isolation (Jan–Aug 2019)",
+      "created_at_utc": "2026-08-20T17:58:00Z"
+    },
+    {
+      "dataset_version_id": "DARTIS-2019-val",
+      "dataset_name": "DARTIS 2019 Validation Partition",
+      "split": "VALIDATION",
+      "parent_dataset_version_id": "DARTIS-2019-v1.0",
+      "acquisition_date_range": {
+        "start_utc": "2019-09-01T00:00:00Z",
+        "end_utc": "2019-10-31T23:59:59Z"
+      },
+      "scene_count": 32,
+      "tile_count": 548,
+      "oil_tile_count": 205,
+      "lookalike_tile_count": 343,
+      "negative_tile_count": 0,
+      "split_fraction": 0.15,
+      "disjointness_guarantee": "Scene-level temporal isolation (Sep–Oct 2019); zero overlap with Train or Test",
+      "created_at_utc": "2026-08-20T17:58:00Z"
+    },
+    {
+      "dataset_version_id": "DARTIS-2019-test",
+      "dataset_name": "DARTIS 2019 Test Benchmark Partition",
+      "split": "TEST",
+      "parent_dataset_version_id": "DARTIS-2019-v1.0",
+      "acquisition_date_range": {
+        "start_utc": "2019-11-01T00:00:00Z",
+        "end_utc": "2019-12-31T23:59:59Z"
+      },
+      "scene_count": 32,
+      "tile_count": 549,
+      "oil_tile_count": 205,
+      "lookalike_tile_count": 344,
+      "negative_tile_count": 0,
+      "split_fraction": 0.15,
+      "disjointness_guarantee": "Held-out temporal and geographic partition (Nov–Dec 2019); zero overlap with Train or Val",
+      "created_at_utc": "2026-08-20T17:58:00Z"
+    }
+  ]
+}

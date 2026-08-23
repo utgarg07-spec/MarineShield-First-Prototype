@@ -1,0 +1,20 @@
+{
+  "sample_id": "DARTIS-2019-train_lookalike_09",
+  "class_label": "SHIP_WAKE",
+  "split": "DARTIS-2019-train",
+  "dimensions": [
+    512,
+    512
+  ],
+  "oil_pixel_count": 0,
+  "box_prompt": [
+    100,
+    200,
+    450,
+    310
+  ],
+  "center_point": [
+    275,
+    255
+  ]
+}
